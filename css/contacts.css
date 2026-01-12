@@ -1,0 +1,115 @@
+/* ==================================================
+   CONTACTS PAGE — PRO STYLE (like sales)
+================================================== */
+
+/* PAGE HEADER */
+.page-header--contacts {
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    padding: 100px 0 80px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.page-header--contacts p {
+    max-width: 560px;
+    margin-top: 12px;
+    color: var(--color-text-muted);
+}
+
+/* GRID */
+.contacts__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* LEFT */
+.contacts__info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* CARD */
+.contacts-card {
+    background-color: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 28px 30px;
+    box-shadow: var(--shadow-soft);
+}
+
+.contacts-card h2,
+.contacts-card h3 {
+    margin-bottom: 18px;
+}
+
+/* LIST */
+.contacts__list {
+    list-style: none;
+}
+
+.contacts__list li {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 14px;
+}
+
+.contacts__list span {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.contacts__list strong {
+    font-weight: 600;
+    color: var(--color-heading);
+}
+
+/* MAP */
+.contacts__map {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.contacts__map iframe {
+    width: 100%;
+    height: 420px;
+    border: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+    .contacts__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contacts__map iframe {
+        height: 320px;
+    }
+}
+
+/* PAGE HEADER — VISUAL ENHANCEMENT */
+
+.page-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-link);
+}
+
+.page-header__meta {
+    margin-top: 20px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}

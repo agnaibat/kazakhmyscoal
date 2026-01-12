@@ -1,0 +1,295 @@
+/* ==================================================
+   SALES PAGE STYLES
+   (used only on sales.html)
+================================================== */
+
+
+/* ==================================================
+   PAGE HEADER (SALES)
+================================================== */
+.page-header {
+    padding: 60px 0 50px;
+    background-color: var(--color-bg-light);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.page-header--sales {
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    padding: 100px 0 90px;
+}
+
+.page-header__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* LEFT */
+.page-header__label {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-link);
+}
+
+.page-header__desc {
+    margin: 20px 0 26px;
+    max-width: 520px;
+    color: var(--color-text-muted);
+}
+
+.page-header__features {
+    list-style: none;
+    margin-bottom: 32px;
+}
+
+.page-header__features li {
+    padding-left: 22px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.page-header__features li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--color-link);
+}
+
+/* RIGHT / VISUAL */
+.page-header__visual {
+    position: relative;
+}
+
+.page-header__visual img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+/* STATS */
+.page-header__stats {
+    position: absolute;
+    bottom: -24px;
+    right: 24px;
+
+    display: flex;
+    gap: 16px;
+
+    background: #ffffff;
+    padding: 16px 20px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-soft);
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat strong {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-heading);
+}
+
+.stat span {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+
+/* ==================================================
+   PRODUCT CARDS
+================================================== */
+.product-cards__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    transition: var(--transition-base);
+}
+
+.product-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    margin: 16px 16px 6px;
+}
+
+.product-card p {
+    margin: 0 16px 20px;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-soft);
+}
+
+
+/* ==================================================
+   TECH TABLE
+================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-size: 0.95rem;
+}
+
+thead {
+    background-color: var(--color-bg-light);
+}
+
+th,
+td {
+    padding: 14px 16px;
+    border: 1px solid var(--color-border);
+    text-align: left;
+}
+
+th {
+    color: var(--color-heading);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #eef2f7;
+}
+
+
+/* ==================================================
+   LOGISTICS & SHIPPING
+================================================== */
+.logistics {
+    background-color: var(--color-bg-light);
+    padding: 70px 0;
+}
+
+.logistics h2 {
+    margin-bottom: 30px;
+}
+
+.logistics__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* IMAGE CARD */
+.logistics-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    cursor: pointer;
+}
+
+.logistics-img img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    background-color: var(--color-bg-light);
+    transition: transform 0.4s ease;
+}
+
+.logistics-img:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ==================================================
+   REQUEST FORM
+================================================== */
+.request-form {
+    margin-top: 30px;
+    max-width: 600px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 14px;
+    font-size: 0.9rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-family: var(--font-base);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-link);
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+@media (max-width: 900px) {
+
+    .page-header__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .page-header__visual img {
+        height: 260px;
+    }
+
+    .page-header__stats {
+        position: static;
+        margin-top: 16px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    .product-card img {
+        height: 140px;
+    }
+
+    .logistics-img img {
+        height: 220px;
+    }
+}
