@@ -17,6 +17,14 @@
     --container-width: 1200px;
     --container-padding: 24px;
     --header-height: 70px;
+
+     /* Radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+
+    /* Shadows */
+    --shadow-soft: 0 12px 30px rgba(0,0,0,0.08);
 }
 
 /* BASE */
