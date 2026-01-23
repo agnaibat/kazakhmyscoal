@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>О компании — Kazakhmys Coal</title>
+    <meta name="description" content="Информация о компании Kazakhmys Coal. История, деятельность, контроль качества и развитие.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header__inner">
+
+        <div class="header__logo">
+            <a href="index.html">Kazakhmys Coal</a>
+        </div>
+
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html" class="active">О компании</a></li>
+                <li><a href="sales.html">Продажи</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__lang">
+            <a href="#" class="active">RU</a> | <a href="#">KZ</a> | <a href="#">EN</a>
+        </div>
+
+        <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__inner">
+        <button class="mobile-menu__close" id="closeMenu">×</button>
+
+        <nav class="mobile-menu__nav">
+            <a href="index.html">Главная</a>
+            <a href="about.html" class="active">О компании</a>
+            <a href="sales.html">Продажи</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+
+        <div class="mobile-menu__lang">
+            <a href="#" class="active">RU</a>
+            <a href="#">KZ</a>
+            <a href="#">EN</a>
+        </div>
+    </div>
+</div>
+
+<main>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+        <span class="page-label">О компании</span>
+        <h1>Kazakhmys Coal</h1>
+        <p>
+            Производственная компания, осуществляющая добычу и поставку
+            угольной продукции для промышленных и коммунально-бытовых потребителей.
+        </p>
+    </div>
+</section>
+
+<!-- COMPANY OVERVIEW -->
+<section class="about-company">
+    <div class="container about-company__grid">
+
+        <div class="about-company__text">
+            <h2>Общая информация</h2>
+            <p>
+                Kazakhmys Coal специализируется на добыче, переработке и поставке
+                угольной продукции различной фракции и калорийности.
+            </p>
+            <p>
+                Компания осуществляет полный цикл работ — от добычи и контроля
+                качества до логистики и отгрузки конечным потребителям.
+            </p>
+        </div>
+
+        <div class="about-company__image">
+            <img src="img/about2/about-main.png" alt="Производственная деятельность">
+        </div>
+
+    </div>
+</section>
+
+<!-- HISTORY -->
+<section class="history">
+    <div class="container">
+
+        <h2>История компании</h2>
+
+        <div class="history__timeline">
+
+            <div class="history-item">
+                <span class="history-year">2018</span>
+                <p>Начало производственной деятельности и формирование команды.</p>
+            </div>
+
+            <div class="history-item">
+                <span class="history-year">2020</span>
+                <p>Запуск регулярных поставок угольной продукции промышленным потребителям.</p>
+            </div>
+
+            <div class="history-item">
+                <span class="history-year">2022</span>
+                <p>Расширение ассортимента фракций и увеличение объёмов добычи.</p>
+            </div>
+
+            <div class="history-item">
+                <span class="history-year">2024</span>
+                <p>Оптимизация логистики и развитие долгосрочных B2B-контрактов.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- VIDEO -->
+<section class="about-video">
+    <div class="container">
+        <h2>Видео о компании</h2>
+
+        <div class="video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID"
+                title="Видео о компании"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section class="certificates">
+    <div class="container">
+
+        <h2>Сертификаты</h2>
+
+        <div class="certificates__grid">
+            <div class="certificate-card">
+                <img src="img/about2/cert-01.png" alt="" class="js-lightbox">
+                <p>Сертификат качества</p>
+            </div>
+            <div class="certificate-card">
+                <img src="img/about2/cert-02.png" alt="" class="js-lightbox">
+                <p>Протокол испытаний</p>
+            </div>
+            <div class="certificate-card">
+                <img src="img/about2/cert-03.png" alt="" class="js-lightbox">
+                <p>Экологическая документация</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__info">
+            <p><strong>ТОО «Kazakhmys Coal»</strong></p>
+            <p>Республика Казахстан</p>
+            <p>© 2025 Kazakhmys Coal</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose">×</button>
+    <img src="" alt="Сертификат" class="lightbox__img">
+</div>
+
+<script src="js/header.js"></script>
+<script src="js/about.js"></script>
+</body>
+</html>

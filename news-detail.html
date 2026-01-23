@@ -3,93 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <title>Kazakhmys Coal увеличил объёмы добычи угля</title>
-    <meta name="description" content="Новость Kazakhmys Coal">
+    <meta name="description" content="Новость компании Kazakhmys Coal">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
+<!-- HEADER -->
 <header class="header">
     <div class="container header__inner">
+
         <div class="header__logo">
             <a href="index.html">Kazakhmys Coal</a>
         </div>
 
         <nav class="header__nav">
             <ul class="nav__list">
-                <li><a href="#">О компании</a></li>
-                <li><a href="#">Деятельность</a></li>
-                <li><a href="#">Производство</a></li>
-                <li><a href="#">Устойчивое развитие</a></li>
-                <li><a href="news.html">Пресс-центр</a></li>
-                <li><a href="#">Карьера</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О компании</a></li>
+                <li><a href="sales.html">Продажи</a></li>
+                <li><a href="news.html" class="active">Новости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
 
         <div class="header__lang">
             <a href="#" class="active">RU</a> | <a href="#">KZ</a> | <a href="#">EN</a>
         </div>
+
+        <button class="burger" id="burgerBtn">
+            <span></span><span></span><span></span>
+        </button>
     </div>
 </header>
 
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__inner">
+        <button class="mobile-menu__close" id="closeMenu">×</button>
+        <nav class="mobile-menu__nav">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О компании</a>
+            <a href="sales.html">Продажи</a>
+            <a href="news.html" class="active">Новости</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+    </div>
+</div>
+
 <main>
 
-    <!-- BREADCRUMBS -->
-    <section class="breadcrumbs">
-        <div class="container">
-            <a href="index.html">Главная</a> /
-            <a href="news.html">Новости</a> /
-            <span>Kazakhmys Coal увеличил объёмы добычи угля</span>
-        </div>
-    </section>
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+        <span class="page-label">Новости</span>
+        <h1>Kazakhmys Coal увеличил объёмы добычи угля</h1>
+        <p class="page-date">15 января 2025</p>
+    </div>
+</section>
 
-    <!-- PAGE HEADER -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Kazakhmys Coal увеличил объёмы добычи угля</h1>
-            <p>15 января 2025 года</p>
-        </div>
-    </section>
+<!-- ARTICLE -->
+<section class="page-content">
+    <div class="container article-container">
 
-    <!-- ARTICLE CONTENT -->
-    <section class="page-content">
-        <div class="container">
-
-            <article class="content">
-
-                <p>
-                    По итогам 2024 года ТОО «Kazakhmys Coal» увеличило объёмы добычи угля,
-                    продемонстрировав устойчивый рост производственных показателей.
-                </p>
-
-                <p>
-                    Рост стал возможен благодаря модернизации техники, внедрению
-                    современных технологий и повышению эффективности производственных процессов.
-                </p>
-
-                <p>
-                    В 2025 году компания планирует дальнейшее развитие производственных мощностей,
-                    усиление мер промышленной безопасности и реализацию экологических программ.
-                </p>
-
-                <figure class="news-image">
-                    <img src="img/news/news-1.jpg" alt="Производственные объекты Kazakhmys Coal">
-                    <figcaption>Производственные мощности компании</figcaption>
-                </figure>
-
-            </article>
+        <article class="article">
 
             <p>
-                <a href="news.html">← Вернуться к списку новостей</a>
+                По итогам 2024 года ТОО «Kazakhmys Coal» увеличило объёмы добычи угля,
+                продемонстрировав устойчивый рост производственных показателей.
             </p>
 
-        </div>
-    </section>
+            <p>
+                Рост стал возможен благодаря модернизации техники, внедрению
+                современных технологий и повышению эффективности процессов.
+            </p>
+
+            <figure class="article-image">
+                <img src="img/news/news-1.jpg" alt="Производственные объекты">
+                <figcaption>Производственные мощности компании</figcaption>
+            </figure>
+
+            <p>
+                В 2025 году компания планирует дальнейшее развитие,
+                усиление мер промышленной безопасности и экологических инициатив.
+            </p>
+
+            <p class="article-back">
+                <a href="news.html">← Вернуться к новостям</a>
+            </p>
+
+        </article>
+
+    </div>
+</section>
 
 </main>
 
+<!-- FOOTER -->
 <footer class="footer">
     <div class="container footer__inner">
         <div class="footer__info">

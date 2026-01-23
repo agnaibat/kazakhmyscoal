@@ -27,7 +27,8 @@
         <!-- DESKTOP NAV -->
         <nav class="header__nav">
             <ul class="nav__list">
-                <li><a href="index.html">О компании</a></li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О компании</a></li>
                 <li><a href="sales.html">Продажи</a></li>
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
@@ -55,7 +56,8 @@
         <button class="mobile-menu__close" id="closeMenu">×</button>
 
         <nav class="mobile-menu__nav">
-            <a href="index.html">О компании</a>
+            <a href="index.html">Главная</a>
+            <a href="about.html">О компании</a>
             <a href="sales.html">Продажи</a>
             <a href="contacts.html">Контакты</a>
         </nav>
@@ -172,6 +174,111 @@
 
     </div>
 </section>
+
+<!-- ================= CLIENTS MAP ================= -->
+<section class="clients-map">
+  <div class="container">
+
+    <h2>Карта клиентов</h2>
+    <p class="clients-map__desc">
+      Мы осуществляем поставки угольной продукции по территории
+      Республики Казахстан. На карте отмечены регионы присутствия наших клиентов.
+    </p>
+
+    <div class="clients-map__wrapper">
+
+      <svg
+        viewBox="0 0 1000 500"
+        class="clients-map__svg"
+        aria-label="Карта Казахстана"
+      >
+
+        <!-- REALISTIC KAZAKHSTAN OUTLINE (SIMPLIFIED) -->
+        <path
+          d="M95 255
+             L145 210
+             L230 185
+             L310 170
+             L385 185
+             L455 165
+             L535 190
+             L610 180
+             L685 205
+             L760 235
+             L830 270
+             L865 315
+             L835 350
+             L760 365
+             L690 395
+             L610 410
+             L530 425
+             L450 440
+             L370 430
+             L295 405
+             L230 375
+             L180 340
+             L130 300
+             Z"
+          class="kz-map"
+        />
+
+        <!-- POINTS -->
+
+        <!-- Karaganda -->
+        <g class="map-point">
+          <circle cx="505" cy="285" r="6"/>
+          <text x="520" y="290">Караганда</text>
+        </g>
+
+        <!-- Astana -->
+        <g class="map-point">
+          <circle cx="520" cy="245" r="6"/>
+          <text x="535" y="250">Астана</text>
+        </g>
+
+        <!-- Almaty -->
+        <g class="map-point">
+          <circle cx="600" cy="360" r="6"/>
+          <text x="615" y="365">Алматы</text>
+        </g>
+
+        <!-- Pavlodar -->
+        <g class="map-point">
+          <circle cx="615" cy="250" r="6"/>
+          <text x="630" y="255">Павлодар</text>
+        </g>
+
+        <!-- Kostanay -->
+        <g class="map-point">
+          <circle cx="430" cy="245" r="6"/>
+          <text x="445" y="250">Костанай</text>
+        </g>
+
+      </svg>
+
+      <!-- STATS -->
+      <div class="clients-map__stats">
+        <div>
+          <strong>15+</strong>
+          <span>регионов поставок</span>
+        </div>
+        <div>
+          <strong>50+</strong>
+          <span>B2B клиентов</span>
+        </div>
+        <div>
+          <strong>2018</strong>
+          <span>начало поставок</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
 
 <!-- ================= REQUEST FORM ================= -->
 <section class="page-content" id="request">

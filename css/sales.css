@@ -293,3 +293,100 @@ tbody tr:hover {
         height: 220px;
     }
 }
+/* ================= CLIENTS MAP ================= */
+
+.clients-map {
+    background-color: var(--color-bg-light);
+}
+
+.clients-map__desc {
+    max-width: 600px;
+    color: var(--color-text-muted);
+    margin-bottom: 36px;
+}
+
+.clients-map__wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #ffffff, #f8fafc);
+    border-radius: 20px;
+    padding: 36px 32px 28px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.08);
+}
+
+/* SVG */
+.clients-map__svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 32px;
+}
+
+/* MAP BASE */
+.kz-map {
+    fill: #f1f5f9;
+    stroke: #cbd5e1;
+    stroke-width: 2;
+}
+
+/* POINTS */
+.map-point circle {
+    fill: #0b5ed7;
+    stroke: #ffffff;
+    stroke-width: 3;
+    cursor: pointer;
+    filter: drop-shadow(0 4px 10px rgba(11,94,215,.45));
+    transition: transform 0.25s ease, fill 0.25s ease;
+}
+
+.map-point text {
+    font-size: 13px;
+    font-weight: 500;
+    fill: #1f2933;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+}
+
+/* HOVER */
+.map-point:hover circle {
+    transform: scale(1.5);
+    fill: #084298;
+}
+
+.map-point:hover text {
+    opacity: 1;
+}
+
+/* STATS */
+.clients-map__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    text-align: center;
+}
+
+.clients-map__stats strong {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--color-link);
+}
+
+.clients-map__stats span {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .clients-map__stats {
+        grid-template-columns: 1fr;
+    }
+
+    .map-point text {
+        font-size: 11px;
+    }
+}
+
