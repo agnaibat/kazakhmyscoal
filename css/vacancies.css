@@ -1,0 +1,409 @@
+/* ==================================================
+   VACANCIES PAGE
+================================================== */
+
+/* ================= HERO ================= */
+
+/* ================= HERO ================= */
+
+.vac-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0;
+
+    background-image: url('../img/vacancies/bg.png');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+main:has(.vac-hero) {
+    padding-top: 0;
+}
+
+.vac-hero .container {
+    position: relative;
+    z-index: 1;
+    padding-top: var(--header-height);
+}
+
+.vac-hero .page-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--color-link);
+    margin-bottom: 16px;
+    display: block;
+}
+
+.vac-hero h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: 20px;
+    margin-top: 0;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    max-width: 520px;
+}
+
+.vac-hero p {
+    font-size: 16px;
+    color: var(--color-text-muted);
+    max-width: 460px;
+    line-height: 1.7;
+}
+
+/* ================= CONDITIONS ================= */
+
+.vac-conditions {
+    background: #ffffff;
+    padding: 80px 0;
+}
+
+.vac-conditions h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: 48px;
+    margin-top: 12px;
+}
+
+.conditions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.condition-card {
+    padding: 32px 28px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.condition-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-soft);
+}
+
+.condition-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.condition-card h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-heading);
+    margin-bottom: 8px;
+}
+
+.condition-card p {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+/* ================= VACANCIES LIST ================= */
+
+.vac-list {
+    background: var(--color-bg-light);
+    padding: 80px 0;
+}
+
+.vac-list h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: 48px;
+    margin-top: 12px;
+}
+
+.vacancies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 24px;
+}
+
+/* ================= VACANCY CARD ================= */
+
+.vacancy-card {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vacancy-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-soft);
+}
+
+.vacancy-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.vacancy-dept {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-link);
+    margin-bottom: 8px;
+}
+
+.vacancy-header h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--color-heading);
+    line-height: 1.3;
+}
+
+.vacancy-type {
+    flex-shrink: 0;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    background: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    padding: 4px 10px;
+    white-space: nowrap;
+}
+
+.vacancy-requirements {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.vacancy-requirements li {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.vacancy-requirements li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--color-border);
+}
+
+.vacancy-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
+}
+
+.vacancy-salary {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-heading);
+}
+
+.vacancy-btn {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-link);
+    text-decoration: none;
+    padding: 8px 18px;
+    border: 1px solid var(--color-link);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+}
+
+.vacancy-btn:hover {
+    background: var(--color-link);
+    color: #ffffff;
+}
+
+/* ================= HR SECTION ================= */
+
+.vac-hr {
+    background: #ffffff;
+    padding: 80px 0 100px;
+}
+
+.hr-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.hr-info h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: 16px;
+    margin-top: 12px;
+}
+
+.hr-info > p {
+    font-size: 15px;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.hr-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hr-contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.hr-contact-item:last-child {
+    border-bottom: none;
+}
+
+.hr-contact-item strong {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+.hr-contact-item span,
+.hr-contact-item a {
+    font-size: 15px;
+    color: var(--color-heading);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.hr-contact-item a:hover {
+    color: var(--color-link);
+}
+
+/* ================= FORM ================= */
+
+.hr-form {
+    background: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+}
+
+.hr-form h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: 28px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-heading);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    font-family: var(--font-base);
+    font-size: 14px;
+    color: var(--color-text-main);
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    outline: none;
+    transition: border-color 0.2s ease;
+    width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--color-link);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-submit {
+    width: 100%;
+    padding: 14px;
+    background: var(--color-link);
+    color: #ffffff;
+    font-family: var(--font-base);
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.form-submit:hover {
+    opacity: 0.88;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+    .hr-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vac-hero {
+        padding: 120px 0 60px;
+    }
+
+    .vac-hero h1 {
+        font-size: 34px;
+    }
+
+    .vacancies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .conditions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hr-form {
+        padding: 28px 20px;
+    }
+}

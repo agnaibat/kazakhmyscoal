@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coal Products Sales — Kazakhmys Coal</title>
+    <meta name="description" content="Supply of thermal coal of various fractions with calorific value 3750–5600 kcal/kg. Deliveries across Kazakhstan and to Chelyabinsk (RF).">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container header__inner">
+
+        <div class="header__logo">
+            <a href="index.html">Kazakhmys Coal</a>
+        </div>
+
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Company</a></li>
+                <li><a href="sales.html" class="active">Sales</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__lang">
+            <a href="../ru/sales.html">RU</a> |
+            <a href="../kz/sales.html">KZ</a> |
+            <a href="../en/sales.html" class="active">EN</a>
+        </div>
+
+        <button class="burger" id="burgerBtn" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+
+    </div>
+</header>
+
+<main>
+
+<section class="page-header page-header--sales">
+    <div class="container page-header__grid">
+
+        <div class="page-header__content">
+            <span class="page-header__label">Sales</span>
+            <h1>Coal Products Sales</h1>
+
+            <p class="page-header__desc">
+                Kazakhmys Coal supplies thermal coal of various fractions
+                for industrial and municipal consumers
+                across the Republic of Kazakhstan and beyond.
+            </p>
+
+            <ul class="page-header__features">
+                <li>8 coal product fractions</li>
+                <li>Calorific value 3750–5600 kcal/kg</li>
+                <li>Deliveries across Kazakhstan and to Chelyabinsk (RF)</li>
+            </ul>
+
+            <a href="#request" class="btn btn--primary">
+                Request commercial offer
+            </a>
+        </div>
+
+        <div class="page-header__visual">
+            <img src="../img/sales-header.jpg" alt="Kazakhmys Coal Products">
+
+            <div class="page-header__stats">
+                <div class="stat">
+                    <strong>3750–5600</strong>
+                    <span>Kcal/kg</span>
+                </div>
+                <div class="stat">
+                    <strong>8</strong>
+                    <span>Fractions</span>
+                </div>
+                <div class="stat">
+                    <strong>KZ + RF</strong>
+                    <span>Geography</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="product-cards">
+    <div class="container">
+        <h2>Coal Product Fractions</h2>
+
+        <div class="product-cards__grid">
+
+            <article class="product-card">
+                <img src="../img/product card/coal-0-13.jpg" alt="Fraction 0–300">
+                <h3>0–300</h3>
+                <p>Large industrial fraction.</p>
+            </article>
+
+            <article class="product-card">
+                <img src="../img/product card/coal-25-100.jpg" alt="Fraction 20–200">
+                <h3>20–200</h3>
+                <p>Industrial and power sector consumers.</p>
+            </article>
+
+            <article class="product-card">
+                <img src="../img/product card/coal-25-100.jpg" alt="Fraction 25–100">
+                <h3>25–100</h3>
+                <p>CHP plants and large boiler houses.</p>
+            </article>
+
+            <article class="product-card">
+                <img src="../img/product card/coal-13-100.jpg" alt="Fraction 13–100">
+                <h3>13–100</h3>
+                <p>Industrial and municipal facilities.</p>
+            </article>
+
+            <article class="product-card">
+                <img src="../img/product card/coal-25-100.jpg" alt="Fraction 0–100">
+                <h3>0–100</h3>
+                <p>Universal energy fraction.</p>
+            </article>
+
+            <article class="product-card">
+                <img src="../img/product card/coal-0-25.jpg" alt="Fraction 0–25">
+                <h3>0–25</h3>
+                <p>Municipal and household sector.</p>
+            </article>
+
+            <article class="product-card">
+                <img src="../img/product card/coal-13-100.jpg" alt="Fraction 0–20">
+                <h3>0–20</h3>
+                <p>Medium-capacity boiler houses.</p>
+            </article>
+
+            <article class="product-card">
+                <img src="../img/product card/coal-0-13.jpg" alt="Fraction 0–13">
+                <h3>0–13</h3>
+                <p>Fine fraction for household consumers.</p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<section class="clients-map clients-map--leaflet">
+    <div class="container">
+
+        <h2>Delivery Geography</h2>
+
+        <p class="clients-map__desc">
+            Deliveries are carried out across the Republic of Kazakhstan,
+            as well as to Chelyabinsk (Russian Federation).
+        </p>
+
+        <div class="regions-tags">
+            <div class="regions-group">
+                <span class="regions-title">Republic of Kazakhstan</span>
+                <div class="tags">
+                    <span class="tag" data-city="karaganda">Karaganda</span>
+                    <span class="tag" data-city="balkhash">Balkhash</span>
+                    <span class="tag" data-city="topar">Topar</span>
+                    <span class="tag" data-city="shakhtinsk">Shakhtinsk</span>
+                    <span class="tag" data-city="zhezkazgan">Zhezkazgan</span>
+                    <span class="tag" data-city="satpayev">Satpayev</span>
+                    <span class="tag" data-city="shu">Shu</span>
+                </div>
+            </div>
+
+            <div class="regions-group">
+                <span class="regions-title">Export</span>
+                <div class="tags">
+                    <span class="tag tag--export" data-city="chelyabinsk">
+                        Chelyabinsk (RF)
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div id="map" class="leaflet-map"></div>
+
+    </div>
+</section>
+
+<section class="page-content" id="request">
+    <div class="container">
+        <h2>Request Commercial Offer</h2>
+
+        <form class="request-form">
+            <div class="form-group">
+                <label>Company</label>
+                <input type="text" required>
+            </div>
+
+            <div class="form-group">
+                <label>Contact Person</label>
+                <input type="text" required>
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email">
+            </div>
+
+            <div class="form-group">
+                <label>Comment</label>
+                <textarea rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary">
+                Send Request
+            </button>
+        </form>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container footer__inner">
+
+        <div class="footer__info">
+            <p><strong>Kazakhmys Coal LLP</strong></p>
+            <p>Republic of Kazakhstan, Karaganda<br>Nazarbayev str. 33/3</p>
+            <p>
+                Phone: <a href="tel:+77762225855">+7 776 222 5855</a><br>
+                Email: <a href="mailto:Priemnaya.Coal@kazakhmys.kz">
+                    Priemnaya.Coal@kazakhmys.kz
+                </a>
+            </p>
+            <p>© 2025 Kazakhmys Coal. All rights reserved.</p>
+        </div>
+
+        <nav class="footer__nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Company</a></li>
+                <li><a href="sales.html">Sales</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</footer>
+
+<script src="../js/header.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../js/leaflet.js"></script>
+
+</body>
+</html>

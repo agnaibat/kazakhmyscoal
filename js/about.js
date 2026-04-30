@@ -46,3 +46,46 @@ function closeLightbox() {
     lightboxImg.src = '';
     document.body.style.overflow = '';
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll('[data-count]');
+    let started = false;
+
+    const animateCounters = () => {
+        if (started) return;
+        started = true;
+
+        counters.forEach(counter => {
+            const target = parseFloat(counter.dataset.count);
+            const isFloat = target % 1 !== 0;
+            let current = 0;
+            const duration = 1500;
+            const stepTime = 16;
+            const increment = target / (duration / stepTime);
+
+            const update = () => {
+                current += increment;
+                if (current >= target) {
+                    counter.textContent = target;
+                } else {
+                    counter.textContent = isFloat
+                        ? current.toFixed(1)
+                        : Math.floor(current);
+                    requestAnimationFrame(update);
+                }
+            };
+            update();
+        });
+    };
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();
+            }
+        });
+    }, { threshold: 0.4 });
+
+    const statsBlock = document.querySelector('.about-company__stats');
+    if (statsBlock) observer.observe(statsBlock);
+});

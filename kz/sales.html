@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <title>Көмір өнімдерін сату — Kazakhmys Coal</title>
+    <meta name="description" content="3750–5600 ккал/кг жылу шығару қабілеті бар энергетикалық көмір жеткізу. Қазақстан және Челябинск (РФ).">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container header__inner">
+
+        <div class="header__logo">
+            <a href="index.html">Kazakhmys Coal</a>
+        </div>
+
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li><a href="index.html">Басты бет</a></li>
+                <li><a href="about.html">Компания туралы</a></li>
+                <li><a href="sales.html" class="active">Сату</a></li>
+                <li><a href="contacts.html">Байланыс</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__lang">
+            <a href="../ru/sales.html">RU</a> |
+            <a href="../kz/sales.html" class="active">KZ</a> |
+            <a href="../en/sales.html">EN</a>
+        </div>
+
+        <button class="burger" id="burgerBtn" aria-label="Мәзірді ашу">
+            <span></span><span></span><span></span>
+        </button>
+
+    </div>
+</header>
+
+<main>
+
+<!-- ================= PAGE HEADER ================= -->
+<section class="page-header page-header--sales">
+    <div class="container page-header__grid">
+
+        <div class="page-header__content">
+            <span class="page-header__label">Сату</span>
+            <h1>Көмір өнімдерін сату</h1>
+
+            <p class="page-header__desc">
+                Kazakhmys Coal өндірістік және коммуналдық-тұрмыстық
+                тұтынушыларға арналған энергетикалық көмірдің
+                әртүрлі фракцияларын жеткізеді.
+            </p>
+
+            <ul class="page-header__features">
+                <li>8 түрлі көмір фракциясы</li>
+                <li>3750–5600 ккал/кг</li>
+                <li>ҚР және Челябинск (РФ)</li>
+            </ul>
+
+            <a href="#request" class="btn btn--primary">
+                Коммерциялық ұсыныс сұрату
+            </a>
+        </div>
+
+        <div class="page-header__visual">
+            <img src="../img/sales-header.jpg" alt="Kazakhmys Coal көмір өнімі">
+
+            <div class="page-header__stats">
+                <div class="stat">
+                    <strong>3750–5600</strong>
+                    <span>Ккал/кг</span>
+                </div>
+                <div class="stat">
+                    <strong>8</strong>
+                    <span>Фракция</span>
+                </div>
+                <div class="stat">
+                    <strong>ҚР + РФ</strong>
+                    <span>География</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= PRODUCT CARDS ================= -->
+<section class="product-cards">
+    <div class="container">
+        <h2>Көмір фракциялары</h2>
+
+        <div class="product-cards__grid">
+
+            <article class="product-card">
+                <img src="../img/product card/coal-0-13.jpg" alt="Фракция 0–300">
+                <h3>0–300</h3>
+                <p>Ірі өнеркәсіптік фракция.</p>
+            </article>
+
+            <article class="product-card">
+                <img src="../img/product card/coal-25-100.jpg" alt="Фракция 20–200">
+                <h3>20–200</h3>
+                <p>Өнеркәсіптік және энергетикалық тұтынушылар.</p>
+            </article>
+
+            <article class="product-card">
+                <img src="../img/product card/coal-25-100.jpg" alt="Фракция 25–100">
+                <h3>25–100</h3>
+                <p>ЖЭО және ірі қазандықтар.</p>
+            </article>
+
+            <article class="product-card">
+                <img src="../img/product card/coal-13-100.jpg" alt="Фракция 13–100">
+                <h3>13–100</h3>
+                <p>Өнеркәсіптік және коммуналдық нысандар.</p>
+            </article>
+
+            <article class="product-card">
+                <img src="../img/product card/coal-25-100.jpg" alt="Фракция 0–100">
+                <h3>0–100</h3>
+                <p>Әмбебап энергетикалық фракция.</p>
+            </article>
+
+            <article class="product-card">
+                <img src="../img/product card/coal-0-25.jpg" alt="Фракция 0–25">
+                <h3>0–25</h3>
+                <p>Коммуналдық-тұрмыстық сектор.</p>
+            </article>
+
+            <article class="product-card">
+                <img src="../img/product card/coal-13-100.jpg" alt="Фракция 0–20">
+                <h3>0–20</h3>
+                <p>Орташа қуатты қазандықтар.</p>
+            </article>
+
+            <article class="product-card">
+                <img src="../img/product card/coal-0-13.jpg" alt="Фракция 0–13">
+                <h3>0–13</h3>
+                <p>Тұрмыстық тұтынушыларға арналған ұсақ фракция.</p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= MAP ================= -->
+<section class="clients-map clients-map--leaflet">
+    <div class="container">
+
+        <h2>Жеткізу географиясы</h2>
+
+        <p class="clients-map__desc">
+            Жеткізу Қазақстан Республикасының аумағы бойынша,
+            сонымен қатар Челябинск қаласына (РФ) жүзеге асырылады.
+        </p>
+
+        <div class="regions-tags">
+            <div class="regions-group">
+                <span class="regions-title">Қазақстан Республикасы</span>
+                <div class="tags">
+                    <span class="tag" data-city="karaganda">Қарағанды</span>
+                    <span class="tag" data-city="balkhash">Балқаш</span>
+                    <span class="tag" data-city="topar">Топар</span>
+                    <span class="tag" data-city="shakhtinsk">Шахтинск</span>
+                    <span class="tag" data-city="zhezkazgan">Жезқазған</span>
+                    <span class="tag" data-city="satpayev">Сәтбаев</span>
+                    <span class="tag" data-city="shu">Шу</span>
+                </div>
+            </div>
+
+            <div class="regions-group">
+                <span class="regions-title">Экспорт</span>
+                <div class="tags">
+                    <span class="tag tag--export" data-city="chelyabinsk">
+                        Челябинск (РФ)
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div id="map" class="leaflet-map"></div>
+
+    </div>
+</section>
+
+<!-- ================= REQUEST FORM ================= -->
+<section class="page-content" id="request">
+    <div class="container">
+        <h2>Коммерциялық ұсыныс сұрату</h2>
+
+        <form class="request-form">
+            <div class="form-group">
+                <label>Компания</label>
+                <input type="text" required>
+            </div>
+
+            <div class="form-group">
+                <label>Байланыс тұлғасы</label>
+                <input type="text" required>
+            </div>
+
+            <div class="form-group">
+                <label>Телефон</label>
+                <input type="tel" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email">
+            </div>
+
+            <div class="form-group">
+                <label>Түсініктеме</label>
+                <textarea rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary">
+                Жіберу
+            </button>
+        </form>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container footer__inner">
+
+        <div class="footer__info">
+            <p><strong>«Kazakhmys Coal» ЖШС</strong></p>
+            <p>Қазақстан Республикасы, Қарағанды қ.<br>Назарбаев к-сі 33/3</p>
+            <p>
+                Телефон: <a href="tel:+77762225855">+7 776 222 5855</a><br>
+                Email: <a href="mailto:Priemnaya.Coal@kazakhmys.kz">
+                    Priemnaya.Coal@kazakhmys.kz
+                </a>
+            </p>
+            <p>© 2025 Kazakhmys Coal. Барлық құқықтар қорғалған.</p>
+        </div>
+
+        <nav class="footer__nav">
+            <ul>
+                <li><a href="index.html">Басты бет</a></li>
+                <li><a href="about.html">Компания туралы</a></li>
+                <li><a href="sales.html">Сату</a></li>
+                <li><a href="contacts.html">Байланыс</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</footer>
+
+<script src="../js/header.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../js/leaflet.js"></script>
+
+</body>
+</html>
