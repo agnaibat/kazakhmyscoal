@@ -5,8 +5,6 @@ backend:
 media_folder: "img/uploads"
 public_folder: "/img/uploads"
 
-locale: "ru"
-
 collections:
   - name: "news"
     label: "Новости"
