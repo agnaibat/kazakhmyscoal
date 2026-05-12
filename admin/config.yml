@@ -1,0 +1,52 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+
+locale: 'ru'
+
+collections:
+
+  - name: "pages"
+    label: "Страницы"
+    files:
+
+      - label: "Главная RU"
+        name: "home_ru"
+        file: "ru/index.html"
+        fields:
+          - { label: "Hero заголовок", name: "hero_title", widget: "string" }
+          - { label: "Hero описание", name: "hero_description", widget: "text" }
+
+      - label: "Контакты RU"
+        name: "contacts_ru"
+        file: "ru/contacts.html"
+        fields:
+          - { label: "Телефон", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+
+  - name: "vacancies"
+    label: "Вакансии"
+    folder: "content/vacancies"
+    create: true
+    slug: "{{slug}}"
+
+    fields:
+      - { label: "Название вакансии", name: "title", widget: "string" }
+      - { label: "Город", name: "city", widget: "string" }
+      - { label: "Зарплата", name: "salary", widget: "string" }
+      - { label: "Описание", name: "body", widget: "markdown" }
+
+  - name: "news"
+    label: "Новости"
+    folder: "content/news"
+    create: true
+    slug: "{{slug}}"
+
+    fields:
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Изображение", name: "image", widget: "image" }
+      - { label: "Текст", name: "body", widget: "markdown" }
