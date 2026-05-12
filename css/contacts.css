@@ -3,16 +3,40 @@
 ================================================== */
 
 /* PAGE HEADER */
-.page-header--contacts {
-    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
-    padding: 100px 0 80px;
-    border-bottom: 1px solid var(--color-border);
-}
 
 .page-header--contacts p {
     max-width: 560px;
     margin-top: 12px;
     color: var(--color-text-muted);
+}
+
+.page-header--bg {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border-bottom: none;
+
+    background-image: url('../img/contacts/bg.png');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+main:has(.page-header--bg) {
+    padding-top: 0;
+}
+
+.page-header--bg .container {
+    position: relative;
+    z-index: 1;
+    padding-top: var(--header-height);
+}
+
+/* убираем старый градиент только для этой версии */
+.page-header--contacts.page-header--bg {
+    background-color: transparent;
 }
 
 /* GRID */
