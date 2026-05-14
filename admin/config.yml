@@ -9,6 +9,69 @@ public_folder: /img/uploads
 locale: ru
 
 collections:
+  - name: vacancies
+    label: Вакансии
+    files:
+      - label: Все вакансии
+        name: all_vacancies
+        file: _data/vacancies.json
+        fields:
+          - label: Вакансии
+            name: items
+            widget: list
+            fields:
+              - { label: Должность, name: title, widget: string }
+              - { label: Отдел, name: department, widget: string }
+              - { label: График, name: schedule, widget: string }
+              - { label: Зарплата, name: salary, widget: string }
+              - label: Требования
+                name: requirements
+                widget: list
+                field: { label: Требование, name: item, widget: string }
+              - label: Активна
+                name: active
+                widget: boolean
+                default: true
+
+  - name: team
+    label: Команда
+    files:
+      - label: Все сотрудники
+        name: all_team
+        file: _data/team.json
+        fields:
+          - label: Сотрудники
+            name: items
+            widget: list
+            fields:
+              - { label: ФИО, name: name, widget: string }
+              - { label: Должность, name: position, widget: string }
+              - label: Фото
+                name: photo
+                widget: image
+                required: false
+              - label: Отдел
+                name: department
+                widget: select
+                options:
+                  - { label: Руководство, value: management }
+                  - { label: Корпоративные подразделения, value: corporate }
+              - label: Порядок
+                name: order
+                widget: number
+                default: 0
+
+  - name: settings
+    label: Настройки сайта
+    files:
+      - label: Контакты
+        name: contacts
+        file: _data/contacts.json
+        fields:
+          - { label: Телефон, name: phone, widget: string }
+          - { label: Email, name: email, widget: string }
+          - { label: Адрес, name: address, widget: string }
+          - { label: WhatsApp, name: whatsapp, widget: string }
 
   # ===== ВАКАНСИИ =====
   - name: vacancies
