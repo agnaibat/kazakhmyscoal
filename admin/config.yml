@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: твой-логин/kazakhmys-coal  # замени на свой
+  repo: agnaibat/kazakhmyscoal
   branch: main
 
 media_folder: img/uploads
