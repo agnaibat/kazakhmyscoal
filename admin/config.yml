@@ -1,29 +1,71 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: твой-логин/kazakhmys-coal  # замени на свой
   branch: main
 
-media_folder: "img/uploads"
-public_folder: "/img/uploads"
+media_folder: img/uploads
+public_folder: /img/uploads
+
+locale: ru
 
 collections:
-  - name: "news"
-    label: "Новости"
 
-    folder: "content/news"
-
+  # ===== ВАКАНСИИ =====
+  - name: vacancies
+    label: Вакансии
+    folder: _data/vacancies
     create: true
-
     slug: "{{slug}}"
-
     fields:
-      - label: "Заголовок"
-        name: "title"
-        widget: "string"
+      - { label: Должность, name: title, widget: string }
+      - { label: Отдел, name: department, widget: string }
+      - { label: График, name: schedule, widget: string, hint: "например: Вахта 30/30 или 5/2" }
+      - label: Зарплата
+        name: salary
+        widget: string
+        hint: "например: от 450 000 ₸"
+      - label: Требования
+        name: requirements
+        widget: list
+        field: { label: Требование, name: item, widget: string }
+      - label: Активна
+        name: active
+        widget: boolean
+        default: true
 
-      - label: "Дата"
-        name: "date"
-        widget: "datetime"
+  # ===== СОТРУДНИКИ =====
+  - name: team
+    label: Команда
+    folder: _data/team
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: ФИО, name: name, widget: string }
+      - { label: Должность, name: position, widget: string }
+      - label: Фото
+        name: photo
+        widget: image
+        required: false
+      - label: Отдел
+        name: department
+        widget: select
+        options:
+          - { label: Руководство, value: management }
+          - { label: Корпоративные подразделения, value: corporate }
+      - label: Порядок
+        name: order
+        widget: number
+        default: 0
 
-      - label: "Текст"
-        name: "body"
-        widget: "markdown"
+  # ===== КОНТАКТЫ =====
+  - name: settings
+    label: Настройки сайта
+    files:
+      - label: Контакты
+        name: contacts
+        file: _data/contacts.json
+        fields:
+          - { label: Телефон, name: phone, widget: string }
+          - { label: Email, name: email, widget: string }
+          - { label: Адрес, name: address, widget: string }
+          - { label: WhatsApp, name: whatsapp, widget: string }
